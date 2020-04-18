@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>vue入门</title>
+    <script src="./vue.js"></script>
 </head>
 <body>
-    <div>hello world</div>
+    <!-- <div id = "root">{{msg}}</div> -->
+    <div id="root">
+        <!-- <h1>hello {{msg}}</h1> -->
+        <!-- <h1>{{number}}</h1> -->
+        <!-- <h1 v-text="number"></h1> -->
+        <!-- <h1 v-text="content"></h1> -->
+        <!-- <h1 v-html="content" v-on:click="handleClick"></h1> -->
+        <h1 v-html="content" @click="handleClick"></h1>
+    </div>
+    <script>
+        new Vue({
+            el: "#root",
+            // template: "<h1>hello {{msg}}</h1>",
+            data: {
+                msg: "world",
+                number: 123,
+                content: "<h1>hello</h1>"
+            },
+            methods: {
+                handleClick: function() {
+                    this.content = "<h1>world</h1>"
+                }
+            }
+        })
+    </script>
 </body>
 </html>
