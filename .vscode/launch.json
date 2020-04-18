@@ -10,7 +10,7 @@
             "name": "使用本机 Chrome 调试",
             // "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}",
-            "file": "${workspaceFolder}/index_1.html"
+            "file": "${workspaceFolder}/index_2.html"
             
         }
     ]
